@@ -6,4 +6,4 @@ public class Cuenta {
 }
 
 
-/*almacenar las transacciones realizadas por el cliente*/
+/*almacenar las transacciones realizadas por el cliente */
