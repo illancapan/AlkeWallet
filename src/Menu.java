@@ -2,9 +2,11 @@ import java.util.Scanner;
 
 public class Menu {
     //Declaro global scanner
-     //Scanner scanner = new Scanner();
+    Scanner scanner = new Scanner(System.in);
+
     //Llamo a conversor
     Conversor conversor = new Conversor();
+    Banco banco = new Banco();
 
     public void dibujaMenu() {
         String menu = """
@@ -39,26 +41,27 @@ public class Menu {
         while (!salir) {
             dibujaMenu();
             System.out.print("Seleccione una opción: ");
-            Scanner scanner = new Scanner(System.in);
+            //Scanner scanner = new Scanner(System.in);
             int opcion = scanner.nextInt();
 
             switch (opcion) {
                 case 1:
                     System.out.println("Opción seleccionada: Deposito");
-                    // logica deposito
+                    banco.Deposito();
                     break;
                 case 2:
                     System.out.println("Opción seleccionada: Retiro");
-                    // logica retiro
+                    banco.retiro();
                     break;
                 case 3:
                     System.out.println("Opción seleccionada: Saldo");
-                    // logica saldo
+                    banco.mostrarSaldo();
                     break;
                 case 4:
                     System.out.println("Opción seleccionada: Clientes");
-                    // logica clientes
-                    break;
+                    //InformacionCliente.mostrarInformacionCliente();
+                    InformacionCliente.mostrarInformacionCliente(banco.cuenta);
+                break;
                 case 5:
                     System.out.println("Opción seleccionada: Conversor de monedas");
                     dibujaMenuConversor();
@@ -80,7 +83,7 @@ public class Menu {
         while (!salir) {
             dibujaMenuConversor();
             System.out.print("Seleccione una opción: ");
-            Scanner scanner = new Scanner(System.in);
+            //Scanner scanner = new Scanner(System.in);
             int opcion = scanner.nextInt();
 
             switch (opcion) {

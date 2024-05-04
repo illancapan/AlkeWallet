@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Conversor {
+    Scanner leer = new Scanner(System.in);
+
 
     public  void convertirDolar(){
-        Scanner leer = new Scanner(System.in);
+        //Scanner leer = new Scanner(System.in);
         System.out.printf("Ingrese la cantidad de pesos a convertir en Dolares: ");
         double cantidadPesos = leer.nextDouble();
 
@@ -14,7 +16,7 @@ public class Conversor {
         System.out.println("El valor del Dolar es: "+ valorDolar);
     }
     public  void convertirEuro(){
-        Scanner leer = new Scanner(System.in);
+        //Scanner leer = new Scanner(System.in);
         System.out.printf("Ingrese la cantidad de pesos a convertir en Euros: ");
         double cantidadPesos = leer.nextDouble();
 
